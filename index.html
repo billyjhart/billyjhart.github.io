@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billy Hart – Technology Solution Architect</title>
+    <meta name="description" content="Technology Solution Architect specializing in AI-enabled enterprise solutions across Finance, Telecom, and Healthcare. Currently advancing agentic AI implementation.">
+    <style>
+        :root {
+            --primary-900: #0a0e27;
+            --primary-800: #1a1f3a;
+            --primary-700: #2a2f4a;
+            --accent-blue: #3b82f6;
+            --accent-blue-light: #60a5fa;
+            --accent-blue-dim: #1e40af;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-tertiary: #94a3b8;
+            --text-muted: #64748b;
+            --success-green: #10b981;
+            --warning-amber: #f59e0b;
+            
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-xxl: 48px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--primary-900);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: var(--spacing-md);
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-blue-light);
+            text-decoration: underline;
+        }
+
+        a:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: var(--primary-900);
+            padding: var(--spacing-md) var(--spacing-lg);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background: var(--accent-blue-light);
+            color: var(--primary-900);
+            text-decoration: none;
+        }
+
+        .btn:active {
+            background: var(--accent-blue-dim);
+        }
+
+        .btn:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-blue);
+            color: var(--primary-900);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--primary-800);
+            border: 1px solid var(--primary-700);
+            padding: var(--spacing-lg);
+            border-radius: 4px;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            background: var(--primary-700);
+            color: var(--text-secondary);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-right: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .badge:hover {
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue-light);
+        }
+
+        /* Section spacing */
+        section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: var(--spacing-xxl) 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-lg);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-tagline {
+            font-size: 16px;
+            color: var(--text-primary);
+            margin: var(--spacing-lg) 0;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero-social {
+            margin-top: var(--spacing-md);
+            display: flex;
+            gap: var(--spacing-lg);
+            justify-content: center;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            gap: var(--spacing-xl);
+        }
+
+        .competencies {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .competency-card {
+            background: var(--primary-800);
+            border: 1px solid var(--primary-700);
+            padding: var(--spacing-md);
+            border-radius: 4px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .competency-card:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue-light);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .skill-group h3 {
+            font-size: 24px;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+        }
+
+        .capability-statement {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.5;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-card {
+            background: var(--primary-800);
+            border: 1px solid var(--primary-700);
+            border-left: 4px solid var(--accent-blue);
+            padding: var(--spacing-lg);
+            border-radius: 4px;
+        }
+
+        .experience-card.featured {
+            border-left: 6px solid var(--accent-blue);
+            background: linear-gradient(135deg, var(--primary-800) 0%, rgba(59, 130, 246, 0.1) 100%);
+        }
+
+        .experience-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .experience-company {
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            font-size: 14px;
+        }
+
+        .experience-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            color: var(--text-tertiary);
+            font-size: 12px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .experience-description {
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .meta-badge {
+            background: var(--success-green);
+            color: var(--primary-900);
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-right: var(--spacing-xs);
+            font-weight: 500;
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .cert-card {
+            background: var(--primary-800);
+            border: 1px solid var(--primary-700);
+            padding: var(--spacing-lg);
+            border-radius: 4px;
+        }
+
+        .cert-badge {
+            width: 12px;
+            height: 12px;
+            background: var(--success-green);
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: var(--spacing-sm);
+        }
+
+        .cert-title {
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .cert-issuer {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .cert-date {
+            color: var(--text-tertiary);
+            font-size: 14px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Leadership Section */
+        .leadership-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .leadership-card {
+            background: var(--primary-800);
+            border: 1px solid var(--primary-700);
+            border-left: 4px solid var(--accent-blue);
+            padding: var(--spacing-lg);
+            border-radius: 4px;
+        }
+
+        .leadership-role {
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .leadership-org {
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .leadership-dates {
+            color: var(--text-tertiary);
+            font-size: 14px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-800);
+            border-top: 1px solid var(--primary-700);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-link {
+            color: var(--accent-blue);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            padding: var(--spacing-sm);
+        }
+
+        .footer-link:hover {
+            color: var(--accent-blue-light);
+            text-decoration: underline;
+        }
+
+        .footer-link:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        .footer-tagline {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-copyright {
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: var(--spacing-sm);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 48px;
+            }
+
+            .hero-content {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .hero-text {
+                text-align: left;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: start;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .certifications-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 639px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .profile-image {
+                width: 140px;
+                height: 140px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .competencies {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-meta {
+                flex-direction: column;
+                gap: var(--spacing-xs);
+            }
+
+            .nav-links {
+                gap: var(--spacing-md);
+            }
+
+            .site-nav {
+                flex-direction: column;
+                gap: var(--spacing-md);
+                text-align: center;
+            }
+
+            .footer-links {
+                gap: var(--spacing-md);
+            }
+
+            footer {
+                padding: var(--spacing-lg) 0;
+            }
+        }
+
+        @media (min-width: 640px) and (max-width: 1023px) {
+            .profile-image {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent-blue);
+            color: var(--primary-900);
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Site Navigation */
+        .site-header {
+            background: var(--primary-800);
+            border-bottom: 1px solid var(--primary-700);
+            padding: var(--spacing-sm) 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .site-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .site-logo:hover {
+            color: var(--accent-blue-light);
+            text-decoration: none;
+        }
+
+        .site-logo:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        .site-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            padding: var(--spacing-sm);
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue-light);
+            text-decoration: none;
+        }
+
+        .nav-links a:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        .nav-links a.active {
+            color: var(--accent-blue);
+        }
+
+        /* Adjust hero section for navigation */
+        .hero {
+            padding: var(--spacing-xl) 0 var(--spacing-xxl) 0;
+        }
+    </style>
+</head>
+<body id="top">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="site-header">
+        <nav class="site-nav container">
+            <a href="#" class="site-logo">
+                <img src="billy-memoji.jpg" alt="Billy Hart">
+                Billy Hart
+            </a>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Portfolio</a></li>
+                <li><a href="agents.html">Agent System</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="billy-memoji.jpg" 
+                     alt="Billy Hart, smiling with thumbs up" 
+                     class="profile-image">
+                <div class="hero-text">
+                    <h1>Billy Hart</h1>
+                    <div class="hero-subtitle">
+                        Technology Solution Architect | AI-Enabled Enterprise Solutions
+                    </div>
+                    <p class="hero-tagline">
+                        Architect scalable enterprise systems across Finance, Telecom, and Healthcare. Lead development teams delivering complex solutions. Currently advancing agentic AI implementation.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://www.linkedin.com/in/billyhart/" class="btn btn-secondary" target="_blank" 
+                           title="LinkedIn profile opens in new window">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main-content">
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div>
+                        <p>
+                            I architect enterprise data and application solutions that solve complex 
+                            business challenges across Finance, Telecom, and Healthcare industries. As a 
+                            Technology Solution Architect Manager at Accenture, I lead development teams 
+                            to deliver scalable systems while staying current with emerging technologies 
+                            like agentic AI.
+                        </p>
+                        <p>
+                            My approach combines proven enterprise architecture experience with 
+                            forward-looking AI implementation. I bridge technical strategy and hands-on 
+                            delivery, ensuring solutions that meet immediate business needs while 
+                            preparing organizations for intelligent automation.
+                        </p>
+                    </div>
+                    <div class="competencies">
+                        <div class="competency-card">Enterprise Solution Architecture</div>
+                        <div class="competency-card">AI-Enabled System Integration</div>
+                        <div class="competency-card">Technical Team Leadership</div>
+                        <div class="competency-card">Cross-Industry Implementation</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise">
+            <div class="container">
+                <h2>Core Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Enterprise Architecture</h3>
+                        <p class="capability-statement">
+                            Design and deliver scalable data and application solutions for complex business environments
+                        </p>
+                        <div class="skill-tags">
+                            <span class="badge">Data Architecture</span>
+                            <span class="badge">Application Design</span>
+                            <span class="badge">Enterprise Integration</span>
+                            <span class="badge">SQL Server</span>
+                            <span class="badge">.NET/C#</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>AI-Enabled Solutions</h3>
+                        <p class="capability-statement">
+                            Implement agentic AI workflows and controlled automation for enterprise applications
+                        </p>
+                        <div class="skill-tags">
+                            <span class="badge">LangGraph</span>
+                            <span class="badge">Agentic AI</span>
+                            <span class="badge">Workflow Automation</span>
+                            <span class="badge">AI Integration</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Team & Program Leadership</h3>
+                        <p class="capability-statement">
+                            Lead technical teams and manage complex programs from requirements through delivery
+                        </p>
+                        <div class="skill-tags">
+                            <span class="badge">Team Leadership</span>
+                            <span class="badge">Program Management</span>
+                            <span class="badge">Business Analysis</span>
+                            <span class="badge">SDLC Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2>Professional Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-card featured">
+                        <div class="experience-title">Technology Solution Architect Manager</div>
+                        <div class="experience-company">Accenture</div>
+                        <div class="experience-meta">
+                            <span class="meta-badge">Current Role</span>
+                            <span>2019 – Present</span>
+                        </div>
+                        <div class="experience-description">
+                            Lead enterprise architecture initiatives and manage development teams delivering 
+                            scalable solutions across multiple business domains.
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <div class="experience-title">Software & Team Leadership Progression</div>
+                        <div class="experience-company">Accenture</div>
+                        <div class="experience-meta">
+                            <span>2006 – 2019</span>
+                            <span>Associate Manager to Team Lead</span>
+                        </div>
+                        <div class="experience-description">
+                            Progressive leadership roles managing software delivery teams and implementation 
+                            projects for enterprise clients.
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <div class="experience-title">Independent Consulting & IT Leadership</div>
+                        <div class="experience-company">Multiple Organizations</div>
+                        <div class="experience-meta">
+                            <span>1996 – 2006</span>
+                            <span>Consultant, IT Manager, Systems Analyst</span>
+                        </div>
+                        <div class="experience-description">
+                            Built technical expertise across Finance and Telecom industries, including 
+                            independent consulting and IT management roles.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <div class="container">
+                <h2>Certifications & Credentials</h2>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <span class="cert-badge"></span>
+                            People Leadership Credential - Level 1
+                        </div>
+                        <div class="cert-issuer">Accenture</div>
+                        <div class="cert-date">January 2025</div>
+                        <a href="https://www.credly.com/badges/522f47c7-ab0f-4160-87ee-def74fae32c2/linked_in_profile" 
+                           target="_blank" title="View credential on Credly">View Credential</a>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <span class="cert-badge"></span>
+                            Agentic AI in Action: Controlled Workflows with LangGraph
+                        </div>
+                        <div class="cert-issuer">Skillsoft</div>
+                        <div class="cert-date">January 2026</div>
+                        <div style="margin-bottom: var(--spacing-sm); font-size: 14px; color: var(--text-tertiary);">
+                            License: 171269632
+                        </div>
+                        <a href="https://skillsoft.digitalbadges.skillsoft.com/1c2ef4ab-73f0-45f4-a880-da394d7c1e30" 
+                           target="_blank" title="View credential on Skillsoft">View Credential</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership">
+            <div class="container">
+                <h2>Leadership & Volunteering</h2>
+                <div class="leadership-list">
+                    <div class="leadership-card">
+                        <div class="leadership-role">Board Member & Chair, Finance Committee Chair</div>
+                        <div class="leadership-org">Trinity Christian Academy, Inc.</div>
+                        <div class="leadership-dates">April 2011 – July 2017</div>
+                        <div class="experience-description">
+                            Served 5 years as Finance Committee Chair and 3 Years as Board Chair.
+                        </div>
+                    </div>
+                    
+                    <div class="leadership-card">
+                        <div class="leadership-role">Board Member & Audio Visual Director</div>
+                        <div class="leadership-org">Church of The King</div>
+                        <div class="leadership-dates">May 2003 – November 2018</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#top" class="footer-link" title="Back to top">↑ Top</a>
+                <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                <a href="https://www.linkedin.com/in/billyhart/" class="footer-link" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer-tagline">
+                Built using Billy's Agent System
+            </div>
+            <div class="footer-copyright">
+                © 2026 Billy Hart
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

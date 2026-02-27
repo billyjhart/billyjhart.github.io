@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Billy Hart</title>
+    <meta name="description" content="Privacy policy for Billy Hart's personal website explaining data collection and usage practices.">
+    <style>
+        :root {
+            --primary-900: #0a0e27;
+            --primary-800: #1a1f3a;
+            --primary-700: #2a2f4a;
+            --accent-blue: #3b82f6;
+            --accent-blue-light: #60a5fa;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-tertiary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-xxl: 48px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--primary-900);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip-link:focus {
+            position: absolute;
+            left: 6px;
+            top: 6px;
+            width: auto;
+            height: auto;
+            padding: var(--spacing-sm);
+            background: var(--accent-blue);
+            color: var(--primary-900);
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-secondary);
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-blue-light);
+            text-decoration: underline;
+        }
+
+        a:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        /* Lists */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.6;
+            padding-left: var(--spacing-lg);
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            color: var(--accent-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Site Navigation */
+        .site-header {
+            background: var(--primary-800);
+            border-bottom: 1px solid var(--primary-700);
+            padding: var(--spacing-sm) 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .site-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .site-logo:hover {
+            color: var(--accent-blue-light);
+            text-decoration: none;
+        }
+
+        .site-logo:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        .site-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            padding: var(--spacing-sm);
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue-light);
+            text-decoration: none;
+        }
+
+        .nav-links a:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        .nav-links a.active {
+            color: var(--accent-blue);
+        }
+
+        .nav-links li:before {
+            content: none;
+        }
+
+        /* Adjust hero section for navigation */
+        .hero {
+            padding: var(--spacing-xl) 0 var(--spacing-xxl) 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--primary-900);
+            padding: var(--spacing-xxl) 0;
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Main Content */
+        .main-content {
+            background: var(--primary-900);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .emphasis {
+            font-weight: 600;
+            color: var(--accent-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-800);
+            border-top: 1px solid var(--primary-700);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-link {
+            color: var(--accent-blue);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            padding: var(--spacing-sm);
+        }
+
+        .footer-link:hover {
+            color: var(--accent-blue-light);
+            text-decoration: underline;
+        }
+
+        .footer-link:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        .footer-tagline {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-copyright {
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: var(--spacing-sm);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 639px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+
+            .main-content {
+                padding: var(--spacing-lg) 0;
+            }
+
+            .hero {
+                padding: var(--spacing-lg) 0;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            footer {
+                padding: var(--spacing-lg) 0;
+            }
+
+            .nav-links {
+                gap: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+<body id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="site-nav container">
+            <a href="index.html" class="site-logo">
+                <img src="billy-memoji.jpg" alt="Billy Hart">
+                Billy Hart
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="agents.html">Agent System</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <div class="hero-subtitle">Last updated: February 27, 2026</div>
+            </div>
+        </section>
+
+        <section class="main-content">
+            <div class="container">
+                <div class="content-wrapper" id="main-content">
+                    <p>I'm Billy Hart, and this is my personal website. I thought I should be clear about what I do and don't do with information here.</p>
+
+                    <h2>What I don't do:</h2>
+                    <ul>
+                        <li>Share your information with anyone</li>
+                        <li>Sell your information to anyone</li>
+                        <li>Track you across the web</li>
+                        <li>Store information I don't need</li>
+                    </ul>
+
+                    <h2>What information I collect:</h2>
+                    <ul>
+                        <li>Basic web server logs (IP addresses, pages visited) for site maintenance</li>
+                        <li>Any comments or feedback you provide directly to me</li>
+                    </ul>
+
+                    <h2>What I might do with your feedback:</h2>
+                    <ul>
+                        <li>Quote or reference comments you leave on blog posts or LinkedIn</li>
+                        <li>Use your insights to improve content or share lessons learned</li>
+                        <li>Give you credit unless you ask me not to</li>
+                    </ul>
+
+                    <h2>Questions?</h2>
+                    <p>That's it. If you have questions, <a href="https://www.linkedin.com/in/billyhart/" target="_blank">reach out on LinkedIn</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#top" class="footer-link" title="Back to top">↑ Top</a>
+                <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                <a href="https://www.linkedin.com/in/billyhart/" class="footer-link" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer-tagline">
+                Built using Billy's Agent System
+            </div>
+            <div class="footer-copyright">
+                © 2026 Billy Hart
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
