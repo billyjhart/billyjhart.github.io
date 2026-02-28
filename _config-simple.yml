@@ -1,0 +1,61 @@
+# Simple Jekyll Configuration (without plugins)
+
+title: "Billy Hart – Technology Solution Architect"
+description: "Technology Solution Architect specializing in AI-enabled enterprise solutions."
+baseurl: ""
+url: "http://localhost:4000"
+
+# Author information
+author:
+  name: Billy Hart
+  title: Technology Solution Architect
+  bio: "Architect scalable enterprise systems across Finance, Telecom, and Healthcare."
+  linkedin: "https://www.linkedin.com/in/billyhart/"
+  image: "/assets/images/billy-memoji.jpg"
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# No plugins for now
+plugins: []
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Billy Hart"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Navigation
+navigation:
+  - name: Portfolio
+    url: /
+  - name: Agent System
+    url: /agents
+  - name: Blog
+    url: /blog
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - serve.rb

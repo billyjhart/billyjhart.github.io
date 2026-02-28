@@ -1,0 +1,326 @@
+// Reusable components
+
+// Buttons
+.btn {
+    display: inline-block;
+    background: $accent-blue;
+    color: $primary-900;
+    padding: $spacing-md $spacing-lg;
+    border: none;
+    border-radius: 4px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color $transition-duration;
+    min-height: 44px; // Minimum touch target
+    
+    &:hover {
+        background: $accent-blue-light;
+        color: $primary-900;
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: 2px solid $accent-blue;
+        outline-offset: 2px;
+    }
+}
+
+.btn-secondary {
+    background: transparent;
+    color: $accent-blue;
+    border: 2px solid $accent-blue;
+
+    &:hover {
+        background: $accent-blue;
+        color: $primary-900;
+    }
+}
+
+// Cards
+.card {
+    background: $primary-800;
+    border: 1px solid $primary-700;
+    padding: $spacing-lg;
+    border-radius: 4px;
+    margin-bottom: $spacing-lg;
+}
+
+.experience-card {
+    @extend .card;
+    
+    .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: $spacing-md;
+        gap: $spacing-md;
+
+        @media (max-width: $breakpoint-sm) {
+            flex-direction: column;
+            gap: $spacing-sm;
+        }
+    }
+
+    .experience-title {
+        flex: 1;
+
+        h3 {
+            margin-bottom: $spacing-xs;
+        }
+
+        .company {
+            color: $text-secondary;
+            font-weight: $font-weight-medium;
+            margin-bottom: $spacing-xs;
+        }
+
+        .location {
+            color: $text-tertiary;
+            font-size: $font-size-small;
+        }
+    }
+
+    .experience-duration {
+        color: $text-secondary;
+        font-size: $font-size-small;
+        font-weight: $font-weight-medium;
+        white-space: nowrap;
+        
+        @media (max-width: $breakpoint-sm) {
+            align-self: flex-start;
+        }
+    }
+
+    .experience-description {
+        color: $text-secondary;
+        line-height: 1.5;
+    }
+}
+
+.certification-card {
+    @extend .card;
+    
+    h3 {
+        margin-bottom: $spacing-xs;
+    }
+
+    .cert-issuer {
+        color: $text-secondary;
+        margin-bottom: $spacing-sm;
+    }
+
+    .cert-link {
+        display: inline-block;
+        margin-top: $spacing-sm;
+        font-size: $font-size-small;
+    }
+}
+
+.leadership-card {
+    @extend .card;
+    
+    .leadership-header {
+        margin-bottom: $spacing-sm;
+        
+        h3 {
+            margin-bottom: $spacing-xs;
+        }
+
+        .organization {
+            color: $text-secondary;
+            font-weight: $font-weight-medium;
+        }
+    }
+}
+
+// Agent System Cards
+.agent-card {
+    @extend .card;
+    text-align: center;
+    
+    .agent-initial {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background: $accent-blue;
+        color: $primary-900;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-md;
+        margin: 0 auto $spacing-md;
+    }
+
+    h3 {
+        margin-bottom: $spacing-sm;
+    }
+
+    .agent-role {
+        color: $text-secondary;
+        font-style: italic;
+        margin-bottom: $spacing-md;
+    }
+}
+
+.agent-card--user {
+    border-left: 4px solid $accent-blue;
+    max-width: 400px;
+}
+
+.agent-card--orchestrator {
+    border-left: 4px solid $accent-blue;
+    max-width: 450px;
+}
+
+.agent-card--team-member {
+    min-width: 280px;
+    flex: 1;
+}
+
+// Badge system
+.badge {
+    background: $primary-700;
+    color: $text-secondary;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: 4px;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    display: inline-block;
+    margin: 2px 4px 2px 0;
+}
+
+.status-badge {
+    @extend .badge;
+    
+    &.active {
+        background: $success-green;
+        color: $primary-900;
+    }
+
+    &.on-demand {
+        background: $warning-amber;
+        color: $primary-900;
+    }
+}
+
+// Blog Components
+.post-card {
+    @extend .card;
+    border-left: 4px solid $accent-blue;
+    cursor: pointer;
+    transition: border-color $transition-duration;
+
+    &:hover {
+        border-left-color: $accent-blue-light;
+    }
+
+    .post-title {
+        margin-bottom: $spacing-sm;
+        
+        a {
+            color: $text-primary;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent-blue-light;
+            }
+        }
+    }
+
+    .post-excerpt {
+        color: $text-secondary;
+        margin-bottom: $spacing-md;
+    }
+}
+
+.post-meta {
+    color: $text-tertiary;
+    font-size: $font-size-xs;
+    display: flex;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-sm;
+
+    .meta-separator:before {
+        content: "·";
+        margin: 0 $spacing-xs;
+    }
+}
+
+.filter-btn {
+    background: transparent;
+    color: $text-secondary;
+    border: 1px solid $primary-700;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all $transition-duration;
+    font-size: $font-size-small;
+
+    &:hover {
+        color: $text-primary;
+        border-color: $accent-blue;
+    }
+
+    &.active {
+        background: $accent-blue;
+        color: $primary-900;
+        border-color: $accent-blue;
+    }
+}
+
+.author-card {
+    background: $primary-800;
+    border: 1px solid $primary-700;
+    padding: $spacing-lg;
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+    margin-top: $spacing-xl;
+    border-radius: 4px;
+
+    @media (max-width: $breakpoint-sm) {
+        flex-direction: column;
+        text-align: center;
+        gap: $spacing-md;
+    }
+
+    .author-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .author-info {
+        flex: 1;
+
+        h4 {
+            margin-bottom: $spacing-xs;
+        }
+
+        .author-title {
+            color: $text-secondary;
+            margin-bottom: $spacing-sm;
+            font-style: italic;
+        }
+
+        .author-bio {
+            color: $text-secondary;
+            margin-bottom: $spacing-md;
+        }
+
+        .author-links {
+            display: flex;
+            gap: $spacing-md;
+
+            @media (max-width: $breakpoint-sm) {
+                justify-content: center;
+            }
+        }
+    }
+}

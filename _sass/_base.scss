@@ -1,0 +1,133 @@
+// Base styles and typography
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base;
+    background: $primary-900;
+    color: $text-primary;
+    line-height: $line-height-base;
+    font-size: $font-size-base;
+}
+
+// Typography
+h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    margin-bottom: $spacing-md;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 36px; // Reduced for mobile
+    }
+}
+
+h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-snug;
+    margin-bottom: $spacing-lg;
+    color: $text-primary;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 28px; // Reduced for mobile
+    }
+}
+
+h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-snug;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 20px; // Reduced for mobile
+    }
+}
+
+p {
+    margin-bottom: $spacing-md;
+}
+
+// Lists
+ul {
+    margin-bottom: $spacing-md;
+    padding-left: $spacing-lg;
+
+    li {
+        margin-bottom: $spacing-xs;
+    }
+
+    li:before {
+        content: "•";
+        color: $accent-blue;
+        font-weight: $font-weight-bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+}
+
+// Links
+a {
+    color: $accent-blue;
+    text-decoration: none;
+    transition: color $transition-duration;
+
+    &:hover {
+        color: $accent-blue-light;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        outline: 2px solid $accent-blue;
+        outline-offset: 2px;
+    }
+}
+
+// Layout containers
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
+
+.content {
+    max-width: $content-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
+
+// Skip link for accessibility
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: $accent-blue;
+    color: $primary-900;
+    padding: $spacing-sm $spacing-md;
+    text-decoration: none;
+    z-index: $z-index-skip-link;
+
+    &:focus {
+        top: 6px;
+    }
+}
+
+// Images
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Responsive utilities
+@media (max-width: $breakpoint-sm) {
+    .container {
+        padding: 0 $spacing-sm;
+    }
+}
