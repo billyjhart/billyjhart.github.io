@@ -5,30 +5,41 @@ description: "Privacy policy for Billy Hart's personal website explaining data c
 permalink: /privacy/
 ---
 
-# Privacy Policy
+<section class="hero">
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <div class="hero-subtitle">Last updated: February 27, 2026</div>
+    </div>
+</section>
 
-Last updated: February 27, 2026
+<section class="main-content">
+    <div class="container">
+        <div class="content-wrapper" id="main-content">
+            <p>I'm Billy Hart, and this is my personal website. I thought I should be clear about what I do and don't do with information here.</p>
 
-I'm Billy Hart, and this is my personal website. I thought I should be clear about what I do and don't do with information here.
+            <h2>What I don't do:</h2>
+            <ul>
+                <li>Share your information with anyone</li>
+                <li>Sell your information to anyone</li>
+                <li>Track you across the web</li>
+                <li>Store information I don't need</li>
+            </ul>
 
-## What I don't do:
+            <h2>What information I collect:</h2>
+            <ul>
+                <li>Basic web server logs (IP addresses, pages visited) for site maintenance</li>
+                <li>Any comments or feedback you provide directly to me</li>
+            </ul>
 
-- Share your information with anyone
-- Sell your information to anyone
-- Track you across the web
-- Store information I don't need
+            <h2>What I might do with your feedback:</h2>
+            <ul>
+                <li>Quote or reference comments you leave on blog posts or LinkedIn</li>
+                <li>Use your insights to improve content or share lessons learned</li>
+                <li>Give you credit unless you ask me not to</li>
+            </ul>
 
-## What information I collect:
-
-- Basic web server logs (IP addresses, pages visited) for site maintenance
-- Any comments or feedback you provide directly to me
-
-## What I might do with your feedback:
-
-- Quote or reference comments you leave on blog posts or LinkedIn
-- Use your insights to improve content or share lessons learned
-- Give you credit unless you ask me not to
-
-## Questions?
-
-That's it. If you have questions, [reach out on LinkedIn](https://www.linkedin.com/in/billyhart/){:target="_blank"}.
+            <h2>Questions?</h2>
+            <p>That's it. If you have questions, <a href="https://www.linkedin.com/in/billyhart/" target="_blank">reach out on LinkedIn</a>.</p>
+        </div>
+    </div>
+</section>
