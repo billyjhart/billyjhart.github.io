@@ -209,6 +209,17 @@
 .agent-card {
     @extend .card;
     text-align: center;
+    position: relative;
+    transition: border-color $transition-duration;
+    
+    &:hover {
+        border-color: $accent-blue;
+    }
+
+    &:focus-within {
+        outline: 2px solid $accent-blue;
+        outline-offset: 2px;
+    }
     
     .agent-initial {
         display: inline-block;
@@ -240,16 +251,192 @@
 .agent-card--user {
     border-left: 4px solid $accent-blue;
     max-width: 400px;
+    width: 100%;
 }
 
 .agent-card--orchestrator {
     border-left: 4px solid $accent-blue;
     max-width: 450px;
+    width: 100%;
 }
 
 .agent-card--team-member {
     min-width: 280px;
     flex: 1;
+}
+
+// Agent Icons
+.agent-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto $spacing-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    background: $accent-blue;
+    
+    &--user {
+        width: 150px;
+        height: 150px;
+        background: none;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.agent-name {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-sm;
+}
+
+.agent-role {
+    color: $text-secondary;
+    font-style: italic;
+    margin-bottom: $spacing-md;
+}
+
+.agent-description {
+    margin-bottom: $spacing-md;
+}
+
+.agent-details {
+    color: $text-tertiary;
+    font-size: $font-size-small;
+    margin-bottom: $spacing-md;
+}
+
+// Agent Details Section  
+.agent-details-section {
+    padding: $spacing-xl 0;
+}
+
+.agent-detail {
+    background: $primary-800;
+    border: 1px solid $primary-700;
+    margin-bottom: $spacing-lg;
+    border-radius: 4px;
+    
+    summary {
+        padding: $spacing-lg;
+        cursor: pointer;
+        font-weight: $font-weight-semibold;
+        font-size: 18px;
+        
+        &:hover {
+            color: $accent-blue-light;
+        }
+        
+        &:focus {
+            outline: 2px solid $accent-blue;
+            outline-offset: 2px;
+        }
+    }
+    
+    .agent-detail-content {
+        padding: 0 $spacing-lg $spacing-lg;
+        border-top: 1px solid $primary-700;
+        
+        h4 {
+            margin: $spacing-lg 0 $spacing-md;
+            color: $accent-blue;
+        }
+        
+        .responsibility-list {
+            padding-left: $spacing-lg;
+            
+            li {
+                margin-bottom: $spacing-sm;
+                color: $text-secondary;
+            }
+        }
+        
+        .metadata {
+            margin-top: $spacing-md;
+            padding-top: $spacing-md;
+            border-top: 1px solid $primary-700;
+            font-size: $font-size-small;
+        }
+    }
+}
+
+// Workflow Components
+.workflow {
+    text-align: center;
+    padding: $spacing-xl 0;
+}
+
+.workflow-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-md;
+    margin: $spacing-xl 0;
+    flex-wrap: wrap;
+    
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+        gap: $spacing-lg;
+    }
+}
+
+.workflow-step {
+    background: $primary-800;
+    border: 1px solid $primary-700;
+    padding: $spacing-md;
+    border-radius: 4px;
+    min-width: 100px;
+    font-weight: $font-weight-semibold;
+    text-align: center;
+    
+    small {
+        display: block;
+        color: $text-tertiary;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-normal;
+        margin-top: $spacing-xs;
+    }
+}
+
+.workflow-arrow {
+    color: $accent-blue;
+    font-size: 24px;
+    font-weight: $font-weight-bold;
+    
+    @media (max-width: $breakpoint-md) {
+        transform: rotate(90deg);
+    }
+}
+
+// Future Teams Section
+.future-teams {
+    padding: $spacing-xl 0;
+}
+
+.future-placeholder {
+    background: $primary-800;
+    border: 2px dashed $primary-700;
+    padding: $spacing-xl;
+    text-align: center;
+    border-radius: 4px;
+    
+    h3 {
+        margin-bottom: $spacing-md;
+        color: $text-secondary;
+    }
+    
+    p {
+        color: $text-tertiary;
+    }
 }
 
 // Badge system

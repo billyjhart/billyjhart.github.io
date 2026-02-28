@@ -4,14 +4,20 @@ title: "Meet the Agent System"
 description: "How Billy's AI agents work together to build this site"
 ---
 
-<section class="hero-container">
-    <div class="hero">
-        <h1>Meet the Agent System</h1>
-        <p class="tagline">How Billy's AI agents work together to build this site</p>
-        <p class="description">
-            This page shows the orchestrated team of AI agents that collaboratively design, develop, and test this portfolio. 
-            Each agent specializes in a specific role—designer, developer, tester—coordinated by an Orchestrator.
-        </p>
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text" style="text-align: center; width: 100%;">
+                <h1>Meet the Agent System</h1>
+                <div class="hero-subtitle">
+                    How Billy's AI agents work together to build this site
+                </div>
+                <p class="hero-tagline">
+                    This page shows the orchestrated team of AI agents that collaboratively design, develop, and test this portfolio. 
+                    Each agent specializes in a specific role—designer, developer, tester—coordinated by an Orchestrator.
+                </p>
+            </div>
+        </div>
     </div>
 </section>
 
