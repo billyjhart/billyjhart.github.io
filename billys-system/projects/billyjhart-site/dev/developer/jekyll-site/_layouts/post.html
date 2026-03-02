@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article class="post-content container">
+    <nav style="margin-bottom: 2rem;">
+        <a href="{{ '/blog' | relative_url }}">← Back to Blog</a>
+    </nav>
+    
+    <header>
+        <div class="post-meta">
+            <span>{{ page.author | default: site.author.name }}</span>
+            <span class="meta-separator"></span>
+            <span>{{ page.date | date: "%Y-%m-%d" }}</span>
+            <span class="meta-separator"></span>
+            <span>{{ page.read_time | default: "5 min" }}</span>
+        </div>
+        <h1>{{ page.title }}</h1>
+        {% if page.categories %}
+        <div class="post-categories" style="margin-bottom: 2rem;">
+            {% for category in page.categories %}
+            <span class="badge">{{ category }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+    
+    <section>
+        {{ content }}
+    </section>
+    
+    {% include author-card.html %}
+</article>
