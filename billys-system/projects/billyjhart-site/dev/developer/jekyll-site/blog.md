@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Blog
-description: "Technical insights, career reflections, and explorations in agentic AI from Billy Hart, Technology Solution Architect with 30+ years experience."
+description: "Technical insights, career reflections, and explorations in agentic AI from Billy Hart, Technology Solution Architect."
 permalink: /blog/
 ---
 

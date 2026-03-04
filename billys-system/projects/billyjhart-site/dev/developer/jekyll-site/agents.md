@@ -133,7 +133,7 @@ description: "How Billy's AI agents work together to build this site"
                 <li>Maintain decision logs and project history</li>
             </ul>
             
-            <p class="metadata"><strong>Output:</strong> Responses to use, updates to memory | <strong>Status:</strong> Always Active</p>
+            <p class="metadata"><strong>Output:</strong> Responses to user, updates to memory | <strong>Status:</strong> Always Active</p>
         </div>
     </details>
 

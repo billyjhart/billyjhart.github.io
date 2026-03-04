@@ -7,35 +7,24 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <img src="{{ '/assets/images/billy-memoji.jpg' | relative_url }}" 
-                 alt="Billy Hart, smiling with thumbs up" 
-                 class="profile-image">
+            <div class="hero-left">
+                <img src="{{ '/assets/images/billy-memoji.jpg' | relative_url }}" 
+                     alt="Billy Hart, smiling with thumbs up" 
+                     class="profile-image">
+                <div class="hero-buttons">
+                    <a href="{{ site.author.linkedin }}" class="btn btn-secondary" target="_blank" 
+                       title="LinkedIn profile opens in new window">LinkedIn</a>
+                </div>
+            </div>
             <div class="hero-text">
                 <h1>Billy Hart</h1>
                 <div class="hero-subtitle">
                     Technology Solution Architect | AI-Enabled Enterprise Solutions
                 </div>
                 <p class="hero-tagline">
-                    Architect scalable enterprise systems across Finance, Telecom, and Healthcare. Lead development teams delivering complex solutions. Currently advancing agentic AI implementation.
-                </p>
-                <div class="hero-buttons">
-                    <a href="{{ site.author.linkedin }}" class="btn btn-secondary" target="_blank" 
-                       title="LinkedIn profile opens in new window">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="about" class="section">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div>
-                <p>
                     I architect enterprise data and application solutions that solve complex business challenges across multiple industries. As a Technology Solution Architect Manager at Accenture, I deliver scalable systems that drive value while staying current with emerging technologies like agentic AI.
                 </p>
-                <p>
+                <p class="hero-tagline">
                     My approach combines proven enterprise architecture experience with forward-looking AI implementation. I bridge technical strategy and hands-on delivery, ensuring solutions that meet immediate business needs while preparing organizations for intelligent automation.
                 </p>
             </div>
@@ -168,25 +157,6 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
                 <div class="cert-date">January 2025</div>
                 <a href="https://www.credly.com/badges/522f47c7-ab0f-4160-87ee-def74fae32c2/linked_in_profile" 
                    target="_blank" title="View credential on Credly">View Credential</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="leadership" class="section">
-    <div class="container">
-        <h2>Leadership & Volunteering</h2>
-        <div class="leadership-list">
-            <div class="leadership-card">
-                <div class="leadership-role">Board Member & Chair, Finance Committee Chair</div>
-                <div class="leadership-org">Trinity Christian Academy, Inc.</div>
-                <div class="leadership-dates">April 2011 – July 2017</div>
-            </div>
-            
-            <div class="leadership-card">
-                <div class="leadership-role">Board Member, Associate Pastor, and Audio Visual Director</div>
-                <div class="leadership-org">Church of The King</div>
-                <div class="leadership-dates">May 2003 – November 2018</div>
             </div>
         </div>
     </div>
