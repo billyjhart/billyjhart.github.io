@@ -13,8 +13,7 @@ description: "How Billy's AI agents work together to build this site"
                     How Billy's AI agents work together to build this site
                 </div>
                 <p class="hero-tagline">
-                    This page shows the orchestrated team of AI agents that collaboratively design, develop, and test this portfolio. 
-                    Each agent specializes in a specific role—designer, developer, tester—coordinated by an Orchestrator.
+                    Each agent specializes in a specific role. Tasks and memory are coordinated by an Orchestrator.
                 </p>
             </div>
         </div>
@@ -49,7 +48,7 @@ description: "How Billy's AI agents work together to build this site"
                 <h3 class="agent-name">Orchestrator</h3>
                 <div class="agent-role">Team Coordinator & Task Router</div>
                 <p class="agent-description">
-                    Routes tasks to team members, manages memory across projects, and aggregates results back to Billy.
+                    Coordinates multiple teams, manages memory across projects, and aggregates results back to Billy.
                 </p>
                 <div class="agent-details"></div>
                 <span class="status-badge active">Always Active</span>
@@ -58,42 +57,86 @@ description: "How Billy's AI agents work together to build this site"
             <!-- Connection Branches -->
             <div class="connection-branches"></div>
 
-            <!-- Dev Team -->
-            <div class="dev-team-grid">
-                <article class="agent-card agent-card--team-member">
-                    <div class="agent-icon">G</div>
-                    <h3 class="agent-name">Designer</h3>
-                    <div class="agent-role">UI/UX Specialist</div>
-                    <p class="agent-description">
-                        Creates design specifications, layouts, visual systems, and accessibility guidelines.
-                    </p>
-                    <div class="agent-details"></div>
-                    <span class="status-badge on-demand">Spawned on Demand</span>
-                </article>
+            <!-- Teams Section -->
+            <div class="teams-section">
+                <div class="teams-grid">
+                    <!-- Development Team -->
+                    <div class="team-section">
+                        <h3 class="team-title">Development Team</h3>
+                        <div class="dev-team-grid">
+                            <article class="agent-card agent-card--team-member">
+                                <div class="agent-icon">G</div>
+                                <h3 class="agent-name">Designer</h3>
+                                <div class="agent-role">UI/UX Specialist</div>
+                                <p class="agent-description">
+                                    Creates design specifications, layouts, visual systems, and accessibility guidelines.
+                                </p>
+                                <div class="agent-details"></div>
+                                <span class="status-badge on-demand">Spawned on Demand</span>
+                            </article>
 
-                <article class="agent-card agent-card--team-member">
-                    <div class="agent-icon">G</div>
-                    <h3 class="agent-name">Developer</h3>
-                    <div class="agent-role">Implementation Specialist</div>
-                    <p class="agent-description">
-                        Builds features from design specs, writes clean code, and follows established project patterns.
-                    </p>
-                    <div class="agent-details"></div>
-                    <span class="status-badge on-demand">Spawned on Demand</span>
-                </article>
+                            <article class="agent-card agent-card--team-member">
+                                <div class="agent-icon">G</div>
+                                <h3 class="agent-name">Developer</h3>
+                                <div class="agent-role">Implementation Specialist</div>
+                                <p class="agent-description">
+                                    Builds features from design specs, writes clean code, and follows established project patterns.
+                                </p>
+                                <div class="agent-details"></div>
+                                <span class="status-badge on-demand">Spawned on Demand</span>
+                            </article>
 
-                <article class="agent-card agent-card--team-member">
-                    <div class="agent-icon">A</div>
-                    <h3 class="agent-name">Tester</h3>
-                    <div class="agent-role">Quality & Validation Specialist</div>
-                    <p class="agent-description">
-                        Verifies implementation against requirements, tests accessibility, and provides quality reports.
-                    </p>
-                    <div class="agent-details"></div>
-                    <span class="status-badge on-demand">Spawned on Demand</span>
-                </article>
+                            <article class="agent-card agent-card--team-member">
+                                <div class="agent-icon">A</div>
+                                <h3 class="agent-name">Tester</h3>
+                                <div class="agent-role">Quality & Validation Specialist</div>
+                                <p class="agent-description">
+                                    Verifies implementation against requirements, tests accessibility, and provides quality reports.
+                                </p>
+                                <div class="agent-details"></div>
+                                <span class="status-badge on-demand">Spawned on Demand</span>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Communications Team -->
+                    <div class="team-section">
+                        <h3 class="team-title">Communications Team</h3>
+                        <div class="comms-team-grid">
+                            <article class="agent-card agent-card--team-member">
+                                <div class="agent-icon">C</div>
+                                <h3 class="agent-name">Communications Strategist</h3>
+                                <div class="agent-role">Content & Messaging Specialist</div>
+                                <p class="agent-description">
+                                    Creates content strategy, manages external communications, and develops messaging frameworks.
+                                </p>
+                                <div class="agent-details"></div>
+                                <span class="status-badge on-demand">Spawned on Demand</span>
+                            </article>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="container projects-section">
+    <h2>Active Projects</h2>
+    
+    <div class="projects-grid">
+        <article class="project-card">
+            <h3 class="project-name">billyjhart-site</h3>
+            <p class="project-description">
+                Personal portfolio website showcasing Billy's professional background, 
+                built collaboratively by the agent system using Jekyll and modern web standards.
+            </p>
+            <div class="project-meta">
+                <div class="project-team">📋 Assigned Team: Development Team</div>
+                <div class="project-status">✅ Status: Active Development</div>
+                <div class="project-repo">🔗 Repository: github.com/billyjhart/billyjhart-site</div>
+            </div>
+        </article>
     </div>
 </section>
 
@@ -173,7 +216,7 @@ description: "How Billy's AI agents work together to build this site"
                 <li>Document technical decisions and approach</li>
             </ul>
             
-            <p class="metadata">Output:</strong> Code, implementation summaries | <strong>Status:</strong> Spawned on Demand</p>
+            <p class="metadata"><strong>Output:</strong> Code, implementation summaries | <strong>Status:</strong> Spawned on Demand</p>
         </div>
     </details>
 
@@ -194,6 +237,26 @@ description: "How Billy's AI agents work together to build this site"
             </ul>
             
             <p class="metadata"><strong>Output:</strong> Test reports, quality metrics | <strong>Status:</strong> Spawned on Demand</p>
+        </div>
+    </details>
+
+    <details class="agent-detail">
+        <summary>Communications Strategist (Claude)</summary>
+        <div class="agent-detail-content">
+            <p><strong>Role:</strong> Content & Messaging Specialist</p>
+            <p>The Communications Strategist develops content strategies, creates messaging frameworks, and manages external communications. They ensure consistent voice across all content and coordinate communication initiatives.</p>
+            
+            <h4>Responsibilities:</h4>
+            <ul class="responsibility-list">
+                <li>Develop comprehensive content strategies</li>
+                <li>Create messaging frameworks and brand voice guidelines</li>
+                <li>Manage external communications and outreach</li>
+                <li>Coordinate multi-channel communication campaigns</li>
+                <li>Ensure consistent messaging across platforms</li>
+                <li>Analyze communication effectiveness and iterate</li>
+            </ul>
+            
+            <p class="metadata"><strong>Output:</strong> Content strategies, messaging docs | <strong>Status:</strong> Spawned on Demand</p>
         </div>
     </details>
 </section>
@@ -227,10 +290,18 @@ description: "How Billy's AI agents work together to build this site"
 
 <section class="container future-teams">
     <h2>Built for Growth</h2>
-    <p class="text-secondary">The agent system is designed to add new teams as needed—for example, a communications team, content team, or specialized tooling teams.</p>
+    <p class="text-secondary">The agent system is designed with a multi-team architecture. Currently active are the Development Team and Communications Team, with the flexibility to add new specialized teams as needed.</p>
+    
+    <div class="current-teams">
+        <h3>Current Active Teams</h3>
+        <ul>
+            <li><strong>Development Team:</strong> UI/UX design, implementation, and quality assurance</li>
+            <li><strong>Communications Team:</strong> Content strategy and external messaging</li>
+        </ul>
+    </div>
     
     <div class="future-placeholder">
-        <h3>Future Teams</h3>
-        <p>New specialist teams can be added to handle different domains like content strategy, marketing, or technical documentation.</p>
+        <h3>Future Expansion</h3>
+        <p>Additional specialist teams can be easily integrated for domains like technical documentation, marketing automation, or specialized tooling.</p>
     </div>
 </section>
