@@ -6,7 +6,7 @@ This repository contains my professional portfolio website, built using an innov
 
 ## 🚀 Live Site
 
-**[Visit billyjhart.github.io →](https://billyjhart.github.io)**
+**[Visit billyjhart.me →](https://billyjhart.me)**
 
 ## 🤖 Built with Agent-Based Development
 
