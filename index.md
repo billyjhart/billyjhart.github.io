@@ -7,50 +7,26 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <img src="{{ '/assets/images/billy-memoji.jpg' | relative_url }}" 
-                 alt="Billy Hart, smiling with thumbs up" 
-                 class="profile-image">
+            <div class="hero-left">
+                <img src="{{ '/assets/images/billy-memoji.jpg' | relative_url }}" 
+                     alt="Billy Hart, smiling with thumbs up" 
+                     class="profile-image">
+                <div class="hero-buttons">
+                    <a href="{{ site.author.linkedin }}" class="btn btn-secondary" target="_blank" 
+                       title="LinkedIn profile opens in new window">LinkedIn</a>
+                </div>
+            </div>
             <div class="hero-text">
                 <h1>Billy Hart</h1>
                 <div class="hero-subtitle">
                     Technology Solution Architect | AI-Enabled Enterprise Solutions
                 </div>
                 <p class="hero-tagline">
-                    Architect scalable enterprise systems across Finance, Telecom, and Healthcare. Lead development teams delivering complex solutions. Currently advancing agentic AI implementation.
+                    I architect enterprise data and application solutions that solve complex business challenges across multiple industries. As a Technology Solution Architect Manager at Accenture, I deliver scalable systems that drive value while staying current with emerging technologies like agentic AI.
                 </p>
-                <div class="hero-buttons">
-                    <a href="{{ site.author.linkedin }}" class="btn btn-secondary" target="_blank" 
-                       title="LinkedIn profile opens in new window">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="about" class="section">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div>
-                <p>
-                    I architect enterprise data and application solutions that solve complex 
-                    business challenges across Finance, Telecom, and Healthcare industries. As a 
-                    Technology Solution Architect Manager at Accenture, I lead development teams 
-                    to deliver scalable systems while staying current with emerging technologies 
-                    like agentic AI.
+                <p class="hero-tagline">
+                    My approach combines proven enterprise architecture experience with forward-looking AI implementation. I bridge technical strategy and hands-on delivery, ensuring solutions that meet immediate business needs while preparing organizations for intelligent automation.
                 </p>
-                <p>
-                    My approach combines proven enterprise architecture experience with 
-                    forward-looking AI implementation. I bridge technical strategy and hands-on 
-                    delivery, ensuring solutions that meet immediate business needs while 
-                    preparing organizations for intelligent automation.
-                </p>
-            </div>
-            <div class="competencies">
-                <div class="competency-card">Enterprise Solution Architecture</div>
-                <div class="competency-card">AI-Enabled System Integration</div>
-                <div class="competency-card">Technical Team Leadership</div>
-                <div class="competency-card">Cross-Industry Implementation</div>
             </div>
         </div>
     </div>
@@ -69,8 +45,6 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
                     <span class="badge">Data Architecture</span>
                     <span class="badge">Application Design</span>
                     <span class="badge">Enterprise Integration</span>
-                    <span class="badge">SQL Server</span>
-                    <span class="badge">.NET/C#</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -83,6 +57,7 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
                     <span class="badge">Agentic AI</span>
                     <span class="badge">Workflow Automation</span>
                     <span class="badge">AI Integration</span>
+                    <span class="badge">OpenClaw</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -113,8 +88,7 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
                     <span>2019 – Present</span>
                 </div>
                 <div class="experience-description">
-                    Lead enterprise architecture initiatives and manage development teams delivering 
-                    scalable solutions across multiple business domains.
+                    Lead enterprise architecture initiatives for development teams delivering scalable solutions across multiple business domains. Working on real world AI solutions with human in the lead.
                 </div>
             </div>
             
@@ -126,8 +100,7 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
                     <span>Associate Manager to Team Lead</span>
                 </div>
                 <div class="experience-description">
-                    Progressive leadership roles managing software delivery teams and implementation 
-                    projects for enterprise clients.
+                    Progressive leadership roles managing software delivery teams and implementation projects for enterprise clients.
                 </div>
             </div>
             
@@ -139,8 +112,7 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
                     <span>Consultant, IT Manager, Systems Analyst</span>
                 </div>
                 <div class="experience-description">
-                    Built technical expertise across Finance and Telecom industries, including 
-                    independent consulting and IT management roles.
+                    Built technical expertise including software development, independent consulting, and IT management roles.
                 </div>
             </div>
         </div>
@@ -154,14 +126,14 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
             <div class="cert-card">
                 <div class="cert-title">
                     <span class="cert-badge"></span>
-                    People Leadership Credential - Level 1
+                    Reinvention with Agentic AI
                 </div>
                 <div class="cert-issuer">Accenture</div>
-                <div class="cert-date">January 2025</div>
-                <a href="https://www.credly.com/badges/522f47c7-ab0f-4160-87ee-def74fae32c2/linked_in_profile" 
+                <div class="cert-date">January 2026</div>
+                <a href="https://www.credly.com/badges/a98cac48-e924-4e50-8c9e-2e777cfe9d74/linked_in_profile" 
                    target="_blank" title="View credential on Credly">View Credential</a>
             </div>
-            
+
             <div class="cert-card">
                 <div class="cert-title">
                     <span class="cert-badge"></span>
@@ -175,27 +147,16 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
                 <a href="https://skillsoft.digitalbadges.skillsoft.com/1c2ef4ab-73f0-45f4-a880-da394d7c1e30" 
                    target="_blank" title="View credential on Skillsoft">View Credential</a>
             </div>
-        </div>
-    </div>
-</section>
 
-<section id="leadership" class="section">
-    <div class="container">
-        <h2>Leadership & Volunteering</h2>
-        <div class="leadership-list">
-            <div class="leadership-card">
-                <div class="leadership-role">Board Member & Chair, Finance Committee Chair</div>
-                <div class="leadership-org">Trinity Christian Academy, Inc.</div>
-                <div class="leadership-dates">April 2011 – July 2017</div>
-                <div class="experience-description">
-                    Served 5 years as Finance Committee Chair and 3 Years as Board Chair.
+            <div class="cert-card">
+                <div class="cert-title">
+                    <span class="cert-badge"></span>
+                    People Leadership Credential - Level 1
                 </div>
-            </div>
-            
-            <div class="leadership-card">
-                <div class="leadership-role">Board Member & Audio Visual Director</div>
-                <div class="leadership-org">Church of The King</div>
-                <div class="leadership-dates">May 2003 – November 2018</div>
+                <div class="cert-issuer">Accenture</div>
+                <div class="cert-date">January 2025</div>
+                <a href="https://www.credly.com/badges/522f47c7-ab0f-4160-87ee-def74fae32c2/linked_in_profile" 
+                   target="_blank" title="View credential on Credly">View Credential</a>
             </div>
         </div>
     </div>

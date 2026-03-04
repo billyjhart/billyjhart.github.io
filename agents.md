@@ -34,7 +34,7 @@ description: "How Billy's AI agents work together to build this site"
                 <h3 class="agent-name">Billy Hart</h3>
                 <div class="agent-role">User / Requester</div>
                 <p class="agent-description">
-                    Defines goals, provides requirements, and reviews the team's output. The human in the loop.
+                    Defines goals, provides requirements, and reviews the team's output. The human in the lead.
                 </p>
                 <div class="agent-details">Role: Project Owner & Reviewer</div>
                 <span class="status-badge">Human User</span>
@@ -51,7 +51,7 @@ description: "How Billy's AI agents work together to build this site"
                 <p class="agent-description">
                     Routes tasks to team members, manages memory across projects, and aggregates results back to Billy.
                 </p>
-                <div class="agent-details">Model: Claude Sonnet 4 | Manages all team coordination</div>
+                <div class="agent-details"></div>
                 <span class="status-badge active">Always Active</span>
             </article>
 
@@ -67,7 +67,7 @@ description: "How Billy's AI agents work together to build this site"
                     <p class="agent-description">
                         Creates design specifications, layouts, visual systems, and accessibility guidelines.
                     </p>
-                    <div class="agent-details">Model: Claude Haiku | Spawned on Demand</div>
+                    <div class="agent-details"></div>
                     <span class="status-badge on-demand">Spawned on Demand</span>
                 </article>
 
@@ -78,7 +78,7 @@ description: "How Billy's AI agents work together to build this site"
                     <p class="agent-description">
                         Builds features from design specs, writes clean code, and follows established project patterns.
                     </p>
-                    <div class="agent-details">Model: Claude Sonnet 4 | Spawned on Demand</div>
+                    <div class="agent-details"></div>
                     <span class="status-badge on-demand">Spawned on Demand</span>
                 </article>
 
@@ -89,7 +89,7 @@ description: "How Billy's AI agents work together to build this site"
                     <p class="agent-description">
                         Verifies implementation against requirements, tests accessibility, and provides quality reports.
                     </p>
-                    <div class="agent-details">Model: Claude Haiku | Spawned on Demand</div>
+                    <div class="agent-details"></div>
                     <span class="status-badge on-demand">Spawned on Demand</span>
                 </article>
             </div>
@@ -104,7 +104,7 @@ description: "How Billy's AI agents work together to build this site"
         <summary>Billy Hart (You — The Human)</summary>
         <div class="agent-detail-content">
             <p><strong>Role:</strong> Project Owner & Final Reviewer</p>
-            <p>Billy is the human in the loop who initiates projects, defines requirements, and provides feedback on deliverables. The entire agent system exists to serve Billy's goals and execute his vision.</p>
+            <p>Billy is the human in the lead who initiates projects, defines requirements, and provides feedback on deliverables. The entire agent system exists to serve Billy's goals and execute his vision.</p>
             
             <h4>Responsibilities:</h4>
             <ul class="responsibility-list">
@@ -133,7 +133,7 @@ description: "How Billy's AI agents work together to build this site"
                 <li>Maintain decision logs and project history</li>
             </ul>
             
-            <p class="metadata"><strong>Model:</strong> Claude Sonnet 4 | <strong>Status:</strong> Always Active</p>
+            <p class="metadata"><strong>Output:</strong> Responses to user, updates to memory | <strong>Status:</strong> Always Active</p>
         </div>
     </details>
 
@@ -153,7 +153,7 @@ description: "How Billy's AI agents work together to build this site"
                 <li>Consider performance constraints in visual decisions</li>
             </ul>
             
-            <p class="metadata"><strong>Model:</strong> Claude Haiku | <strong>Output:</strong> Design specs, accessibility reports | <strong>Status:</strong> Spawned on Demand</p>
+            <p class="metadata"><strong>Output:</strong> Design specs, accessibility reports | <strong>Status:</strong> Spawned on Demand</p>
         </div>
     </details>
 
@@ -173,7 +173,7 @@ description: "How Billy's AI agents work together to build this site"
                 <li>Document technical decisions and approach</li>
             </ul>
             
-            <p class="metadata"><strong>Model:</strong> Claude Sonnet 4 | <strong>Output:</strong> Code, implementation summaries | <strong>Status:</strong> Spawned on Demand</p>
+            <p class="metadata">Output:</strong> Code, implementation summaries | <strong>Status:</strong> Spawned on Demand</p>
         </div>
     </details>
 
@@ -193,7 +193,7 @@ description: "How Billy's AI agents work together to build this site"
                 <li>Provide detailed test reports with pass/fail verdict</li>
             </ul>
             
-            <p class="metadata"><strong>Model:</strong> Claude Haiku | <strong>Output:</strong> Test reports, quality metrics | <strong>Status:</strong> Spawned on Demand</p>
+            <p class="metadata"><strong>Output:</strong> Test reports, quality metrics | <strong>Status:</strong> Spawned on Demand</p>
         </div>
     </details>
 </section>
