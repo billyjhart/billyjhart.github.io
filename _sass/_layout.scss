@@ -342,13 +342,38 @@
     margin: 0 auto;
 }
 
+// Teams Container
+.teams-container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xxl;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    @media (max-width: $breakpoint-md) {
+        gap: $spacing-xl;
+    }
+}
+
+.team-section {
+    width: 100%;
+    
+    .team-title {
+        text-align: center;
+        margin-bottom: $spacing-lg;
+        color: $accent-blue;
+    }
+}
+
 .dev-team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: $spacing-lg;
-    margin-top: $spacing-lg;
+    align-items: start;
     width: 100%;
     max-width: 900px;
+    margin: 0 auto;
     
     @media (max-width: $breakpoint-md) {
         grid-template-columns: 1fr;
@@ -356,6 +381,24 @@
     
     @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+.comms-team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $spacing-lg;
+    align-content: start;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+    }
+    
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
