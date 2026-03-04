@@ -593,7 +593,7 @@
     }
 }
 
-// Projects Components
+// Projects Section
 .projects-section {
     padding: $spacing-xl 0;
     
@@ -603,63 +603,39 @@
     }
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-lg;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .project-card {
     @extend .card;
-    border-left: 4px solid $accent-blue;
-    max-width: 800px;
-    margin: 0 auto $spacing-lg;
+    border-left: 4px solid #28a745; // Green accent for projects
     
-    &:hover {
-        border-left-color: $accent-blue-light;
+    .project-name {
+        font-size: $font-size-h3;
+        font-weight: $font-weight-semibold;
+        margin-bottom: $spacing-md;
+        color: $text-primary;
     }
-}
-
-.project-title {
-    color: $text-primary;
-    font-size: $font-size-h3;
-    font-weight: $font-weight-semibold;
-    margin-bottom: $spacing-md;
     
-    &:hover {
-        color: $accent-blue-light;
+    .project-description {
+        color: $text-secondary;
+        margin-bottom: $spacing-md;
+        line-height: 1.5;
     }
-}
-
-.project-description {
-    color: $text-secondary;
-    margin-bottom: $spacing-lg;
-    line-height: 1.6;
-}
-
-.project-details {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-sm;
-}
-
-.project-meta {
-    display: flex;
-    align-items: center;
-    gap: $spacing-sm;
     
-    @media (max-width: $breakpoint-sm) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: $spacing-xs;
+    .project-meta {
+        color: $text-tertiary;
+        font-size: $font-size-small;
+        
+        .project-team,
+        .project-status,
+        .project-repo {
+            margin-bottom: $spacing-xs;
+        }
     }
-}
-
-.project-label {
-    font-weight: $font-weight-semibold;
-    color: $text-secondary;
-    min-width: 120px;
-    
-    @media (max-width: $breakpoint-sm) {
-        min-width: auto;
-    }
-}
-
-.project-value {
-    color: $text-primary;
-    font-weight: $font-weight-medium;
 }
