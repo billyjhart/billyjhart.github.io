@@ -3,7 +3,7 @@ layout: post
 title: "Getting Started With OpenClaw"
 subtitle: "What I'm learning as a curious technologist exploring AI agents"
 date: 2026-03-03 13:22:00 -0500
-author: Billy Hart
+author: Billy J Hart
 categories: [Technology]
 tags: [AI automation, OpenClaw, technology leadership, artificial intelligence, developer tools]
 excerpt: "A technology architect's honest journey learning OpenClaw AI automation, from initial setup through building functional AI agent teams."

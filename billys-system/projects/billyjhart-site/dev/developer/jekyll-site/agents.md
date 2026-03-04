@@ -13,8 +13,7 @@ description: "How Billy's AI agents work together to build this site"
                     How Billy's AI agents work together to build this site
                 </div>
                 <p class="hero-tagline">
-                    This page shows the orchestrated team of AI agents that collaboratively design, develop, and test this portfolio. 
-                    Each agent specializes in a specific role—designer, developer, tester—coordinated by an Orchestrator.
+                    Each agent specializes in a specific role. Tasks and memory are coordinated by an Orchestrator.
                 </p>
             </div>
         </div>
@@ -29,15 +28,15 @@ description: "How Billy's AI agents work together to build this site"
             <!-- Billy (User) -->
             <article class="agent-card agent-card--user">
                 <div class="agent-icon agent-icon--user">
-                    <img src="{{ '/assets/images/billy-memoji.jpg' | relative_url }}" alt="Billy Hart's memoji, smiling with thumbs up">
+                    <img src="{{ '/assets/images/billy-memoji.jpg' | relative_url }}" alt="Billy J Hart's memoji, smiling with thumbs up">
                 </div>
-                <h3 class="agent-name">Billy Hart</h3>
+                <h3 class="agent-name">Billy J Hart</h3>
                 <div class="agent-role">User / Requester</div>
                 <p class="agent-description">
                     Defines goals, provides requirements, and reviews the team's output. The human in the lead.
                 </p>
                 <div class="agent-details">Role: Project Owner & Reviewer</div>
-                <span class="status-badge">Human User</span>
+                <span class="status-badge">Human In The Lead</span>
             </article>
 
             <!-- Connection Line -->
@@ -49,7 +48,7 @@ description: "How Billy's AI agents work together to build this site"
                 <h3 class="agent-name">Orchestrator</h3>
                 <div class="agent-role">Team Coordinator & Task Router</div>
                 <p class="agent-description">
-                    Routes tasks to team members, manages memory across projects, and aggregates results back to Billy.
+                    Coordinates multiple teams, manages memory across projects, and aggregates results back to Billy. Routes tasks to appropriate teams based on expertise and workload.
                 </p>
                 <div class="agent-details"></div>
                 <span class="status-badge active">Always Active</span>
@@ -58,40 +57,93 @@ description: "How Billy's AI agents work together to build this site"
             <!-- Connection Branches -->
             <div class="connection-branches"></div>
 
-            <!-- Dev Team -->
-            <div class="dev-team-grid">
-                <article class="agent-card agent-card--team-member">
-                    <div class="agent-icon">G</div>
-                    <h3 class="agent-name">Designer</h3>
-                    <div class="agent-role">UI/UX Specialist</div>
-                    <p class="agent-description">
-                        Creates design specifications, layouts, visual systems, and accessibility guidelines.
-                    </p>
-                    <div class="agent-details"></div>
-                    <span class="status-badge on-demand">Spawned on Demand</span>
-                </article>
+            <!-- Teams Grid -->
+            <div class="teams-grid">
+                <!-- Development Team -->
+                <div class="team-section">
+                    <div class="team-header">
+                        <h3>Development Team</h3>
+                        <div class="team-description">Handles design, development, and testing</div>
+                    </div>
+                    
+                    <div class="dev-team-grid">
+                        <article class="agent-card agent-card--team-member">
+                            <div class="agent-icon">G</div>
+                            <h3 class="agent-name">Designer</h3>
+                            <div class="agent-role">UI/UX Specialist</div>
+                            <p class="agent-description">
+                                Creates design specifications, layouts, visual systems, and accessibility guidelines.
+                            </p>
+                            <div class="agent-details"></div>
+                            <span class="status-badge on-demand">Spawned on Demand</span>
+                        </article>
 
-                <article class="agent-card agent-card--team-member">
-                    <div class="agent-icon">G</div>
-                    <h3 class="agent-name">Developer</h3>
-                    <div class="agent-role">Implementation Specialist</div>
-                    <p class="agent-description">
-                        Builds features from design specs, writes clean code, and follows established project patterns.
-                    </p>
-                    <div class="agent-details"></div>
-                    <span class="status-badge on-demand">Spawned on Demand</span>
-                </article>
+                        <article class="agent-card agent-card--team-member">
+                            <div class="agent-icon">G</div>
+                            <h3 class="agent-name">Developer</h3>
+                            <div class="agent-role">Implementation Specialist</div>
+                            <p class="agent-description">
+                                Builds features from design specs, writes clean code, and follows established project patterns.
+                            </p>
+                            <div class="agent-details"></div>
+                            <span class="status-badge on-demand">Spawned on Demand</span>
+                        </article>
 
-                <article class="agent-card agent-card--team-member">
-                    <div class="agent-icon">A</div>
-                    <h3 class="agent-name">Tester</h3>
-                    <div class="agent-role">Quality & Validation Specialist</div>
-                    <p class="agent-description">
-                        Verifies implementation against requirements, tests accessibility, and provides quality reports.
+                        <article class="agent-card agent-card--team-member">
+                            <div class="agent-icon">A</div>
+                            <h3 class="agent-name">Tester</h3>
+                            <div class="agent-role">Quality & Validation Specialist</div>
+                            <p class="agent-description">
+                                Verifies implementation against requirements, tests accessibility, and provides quality reports.
+                            </p>
+                            <div class="agent-details"></div>
+                            <span class="status-badge on-demand">Spawned on Demand</span>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Communications Team -->
+                <div class="team-section">
+                    <div class="team-header">
+                        <h3>Communications Team</h3>
+                        <div class="team-description">Manages content strategy and external communications</div>
+                    </div>
+                    
+                    <div class="comms-team-grid">
+                        <article class="agent-card agent-card--team-member">
+                            <div class="agent-icon">C</div>
+                            <h3 class="agent-name">Communications Strategist</h3>
+                            <div class="agent-role">Content & Messaging Specialist</div>
+                            <p class="agent-description">
+                                Creates content strategy, manages external communications, and ensures consistent brand voice across all channels.
+                            </p>
+                            <div class="agent-details">Model: Claude Haiku</div>
+                            <span class="status-badge on-demand">Spawned on Demand</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connection Line to Projects -->
+            <div class="connection-line"></div>
+
+            <!-- Projects Section -->
+            <div class="projects-section">
+                <div class="section-header">
+                    <h3>Active Projects</h3>
+                    <div class="section-description">Current projects being developed by the team system</div>
+                </div>
+                
+                <div class="project-card">
+                    <h4 class="project-name">billyjhart-site</h4>
+                    <p class="project-description">
+                        Personal portfolio website showcasing Billy's professional background, built collaboratively by the agent system.
                     </p>
-                    <div class="agent-details"></div>
-                    <span class="status-badge on-demand">Spawned on Demand</span>
-                </article>
+                    <div class="project-meta">
+                        <span class="project-team">Assigned Team: Development Team</span>
+                        <span class="project-status">Status: Active Development</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -101,7 +153,7 @@ description: "How Billy's AI agents work together to build this site"
     <h2>Agent Details</h2>
 
     <details class="agent-detail" open>
-        <summary>Billy Hart (You — The Human)</summary>
+        <summary>Billy J Hart (You — The Human)</summary>
         <div class="agent-detail-content">
             <p><strong>Role:</strong> Project Owner & Final Reviewer</p>
             <p>Billy is the human in the lead who initiates projects, defines requirements, and provides feedback on deliverables. The entire agent system exists to serve Billy's goals and execute his vision.</p>
@@ -194,6 +246,26 @@ description: "How Billy's AI agents work together to build this site"
             </ul>
             
             <p class="metadata"><strong>Output:</strong> Test reports, quality metrics | <strong>Status:</strong> Spawned on Demand</p>
+        </div>
+    </details>
+
+    <details class="agent-detail">
+        <summary>Communications Strategist</summary>
+        <div class="agent-detail-content">
+            <p><strong>Role:</strong> Content & Messaging Specialist</p>
+            <p>The Communications Strategist creates content strategy, manages external communications, and ensures consistent brand voice across all channels. They handle content planning, message development, and communication coordination.</p>
+            
+            <h4>Responsibilities:</h4>
+            <ul class="responsibility-list">
+                <li>Develop content strategy and messaging frameworks</li>
+                <li>Create consistent brand voice guidelines</li>
+                <li>Plan and coordinate external communications</li>
+                <li>Draft marketing copy and communication materials</li>
+                <li>Ensure message consistency across platforms</li>
+                <li>Coordinate with development team on content integration</li>
+            </ul>
+            
+            <p class="metadata"><strong>Output:</strong> Content strategies, communication plans | <strong>Status:</strong> Spawned on Demand</p>
         </div>
     </details>
 </section>

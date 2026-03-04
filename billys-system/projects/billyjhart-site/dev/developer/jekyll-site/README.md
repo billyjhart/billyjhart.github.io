@@ -1,4 +1,4 @@
-# Billy Hart - Technology Solution Architect
+# Billy J Hart - Technology Solution Architect
 
 **Technology Solution Architect specializing in AI-enabled enterprise solutions.** Currently advancing agentic AI implementation as Technology Solution Architect Manager at Accenture.
 

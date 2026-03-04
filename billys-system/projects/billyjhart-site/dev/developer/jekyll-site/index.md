@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Billy Hart – Technology Solution Architect"
+title: "Billy J Hart – Technology Solution Architect"
 description: "Technology Solution Architect specializing in AI-enabled enterprise solutions across Finance, Telecom, and Healthcare. Currently advancing agentic AI implementation."
 ---
 
@@ -9,7 +9,7 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
         <div class="hero-content">
             <div class="hero-left">
                 <img src="{{ '/assets/images/billy-memoji.jpg' | relative_url }}" 
-                     alt="Billy Hart, smiling with thumbs up" 
+                     alt="Billy J Hart, smiling with thumbs up" 
                      class="profile-image">
                 <div class="hero-buttons">
                     <a href="{{ site.author.linkedin }}" class="btn btn-secondary" target="_blank" 
@@ -17,7 +17,7 @@ description: "Technology Solution Architect specializing in AI-enabled enterpris
                 </div>
             </div>
             <div class="hero-text">
-                <h1>Billy Hart</h1>
+                <h1>Billy J Hart</h1>
                 <div class="hero-subtitle">
                     Technology Solution Architect | AI-Enabled Enterprise Solutions
                 </div>

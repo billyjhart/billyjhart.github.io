@@ -1,14 +1,14 @@
 # Jekyll Configuration for billyjhart.github.io
 
 # Site settings
-title: "Billy Hart – Technology Solution Architect"
+title: "Billy J Hart – Technology Solution Architect"
 description: "Technology Solution Architect specializing in AI-enabled enterprise solutions across Finance, Telecom, and Healthcare. Currently advancing agentic AI implementation."
 baseurl: ""
 url: "https://billyjhart.github.io"
 
 # Author information
 author:
-  name: Billy Hart
+  name: Billy J Hart
   title: Technology Solution Architect
   bio: "Architect scalable enterprise systems across Finance, Telecom, and Healthcare. Lead development teams delivering complex solutions. Currently advancing agentic AI implementation."
   linkedin: "https://www.linkedin.com/in/billyhart/"
@@ -40,7 +40,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Billy Hart"
+      author: "Billy J Hart"
   - scope:
       path: ""
       type: "pages"

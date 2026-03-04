@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://billyjhart.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://billyjhart.github.io/" rel="alternate" type="text/html" /><updated>2026-03-04T12:13:04-05:00</updated><id>https://billyjhart.github.io/feed.xml</id><title type="html">Billy J Hart – Technology Solution Architect</title><subtitle>Technology Solution Architect specializing in AI-enabled enterprise solutions across Finance, Telecom, and Healthcare. Currently advancing agentic AI implementation.</subtitle><author><name>Billy J Hart</name></author><entry><title type="html">Getting Started With OpenClaw</title><link href="https://billyjhart.github.io/blog/getting-started-with-openclaw/" rel="alternate" type="text/html" title="Getting Started With OpenClaw" /><published>2026-03-03T13:22:00-05:00</published><updated>2026-03-03T13:22:00-05:00</updated><id>https://billyjhart.github.io/blog/getting-started-with-openclaw</id><content type="html" xml:base="https://billyjhart.github.io/blog/getting-started-with-openclaw/"><![CDATA[<p><em>How a curious tech guy stumbled into OpenClaw and what I’m learning building my first autonomous development team</em></p>
+
+<hr />
+
+<p>On February 9th, 2026, I downloaded OpenClaw and started what has become my most exciting technology exploration in years. Like many discoveries, it began with a podcast.</p>
+
+<p>I was listening to <a href="https://www.theinvestorspodcast.com/infinite-tech/is-agi-here-clawdbot-local-ai-agent-swarms-w-pablo-fernandez-trey-sellers/">The Investor’s Podcast</a> when the hosts interviewed two fascinating guests: one was a tinkerer using OpenClaw as a personal assistant, the other a developer running multiple agents 24/7 that were autonomously building applications. I was immediately hooked and ended up listening to that episode three times.</p>
+
+<p>OpenClaw seemed more than just a shiny new tool. They built working systems solving actual problems. And I wanted in.</p>
+
+<p>In enterprise environments, we’re constantly evaluating new technologies while managing security, policy compliance, and practical constraints. OpenClaw represents something unique: an AI automation platform sophisticated enough for complex tasks. But I need more time to understand if it is controllable enough for professional environments.</p>
+
+<h3 id="hardware-and-isolation-strategy">Hardware and Isolation Strategy</h3>
+
+<p>I had a Raspberry Pi 4 sitting idle after running a Bitcoin node project. I reformatted it and dedicated it to OpenClaw. This isolation decision is crucial to limiting what it has access to.</p>
+
+<p>It seems the consensus is to never run OpenClaw on your primary machine. My employer’s policy prohibits it on corporate laptops, which makes complete sense. I have seen that sometimes OpenClaw doesn’t just respond to questions. It goes ahead and takes action on what it thinks you want done. Limiting access is critical.</p>
+
+<h3 id="the-cost-reality-check">The Cost Reality Check</h3>
+
+<p>Within the first days of experimentation, I learned that <strong>model selection matters a lot.</strong> My LLM usage limits evaporated quickly because I started with Claude Opus 4.6, the most expensive model from Anthropic.</p>
+
+<p>After using a few of the “free” chatbots (ChatGPT, Gemini, and Perplexity) to research how to limit token usage in OpenClaw, I stepped down to Sonnet, and then to Haiku. The performance remained surprisingly good while dramatically reducing costs. However, there’s a security trade-off: newer, more expensive models are better at detecting prompt injection attacks. For isolated local network deployment, this was acceptable risk.</p>
+
+<h2 id="building-an-agentic-development-team">Building an Agentic Development Team</h2>
+
+<h3 id="the-first-experiment">The First Experiment</h3>
+
+<p>My initial request was simple: “Make me a personal website.” Within a few minutes, OpenClaw delivered a well-structured site with decent section recommendations. But the process felt chaotic. I’d ask questions and suddenly find OpenClaw implementing solutions I hadn’t explicitly requested.</p>
+
+<h3 id="applying-human-team-concepts-to-ai-agents">Applying Human Team Concepts to AI Agents</h3>
+
+<p>Drawing on experience with human development teams, I asked the main bot to structure my AI agents similarly. We designed a Product Manager, Project Manager, Designer, and a Developer.</p>
+
+<p>The Product Manager successfully planned a portfolio website with an agent team showcase. The Designer created excellent designs. The Developer built a working implementation matching the design specifications.</p>
+
+<p><strong>But then reality hit:</strong> Between sessions, agents couldn’t remember previous work. I constantly had to re-establish context, which became frustrating quickly.</p>
+
+<h3 id="the-memory-problem-and-solution">The Memory Problem and Solution</h3>
+
+<p>I stepped out of OpenClaw and went to the Claude chat. Working with Claude Opus 4.6 with extended thinking, Claude helped me develop a file-based communication and memory system. Key insights:</p>
+
+<ul>
+  <li><strong>Simplify the hierarchy:</strong> Eliminate Product and Project Managers. The main agent becomes the “Orchestrator.”</li>
+  <li><strong>Create specialized teams:</strong> Start with a Development team (Designer, Developer, Tester).</li>
+  <li><strong>Implement persistent memory:</strong> Each agent gets dedicated SOUL and MEMORY directories.</li>
+</ul>
+
+<h3 id="the-workflow-now-works-like-this">The workflow now works like this:</h3>
+
+<ul>
+  <li>Orchestrator spawns specialized agents as needed</li>
+  <li>Each agent receives task context plus access to their memory files</li>
+  <li>Upon completion, agents provide detailed task reports</li>
+  <li>Orchestrator updates memory and maintains continuity across sessions</li>
+</ul>
+
+<h3 id="ad-hoc-vs-configured-agents">Ad-hoc vs. Configured Agents</h3>
+
+<p>Currently I am using ad-hoc agents (spawned on demand) rather than persistent configured agents. This means context restoration happens every time, but provides flexibility. One of the great things about working with AI agents is they never complain about rewrites or process changes. They’re always eager to tackle the next iteration and they are very patient.</p>
+
+<h2 id="results-and-lessons-learned">Results and Lessons Learned</h2>
+
+<p><strong>What worked:</strong></p>
+<ul>
+  <li>This website was completly built by my agent system in OpenClaw</li>
+  <li>Cost optimization through model selection</li>
+  <li>Security through isolation and local deployment</li>
+</ul>
+
+<p><strong>What surprised me:</strong></p>
+<ul>
+  <li>Agents’ capability exceeded expectations. I started with a simple HTLM site. When I decided to host on Github, my agent recommended we move to a Jekyll based site. The bots handled the full conversion is a short time. They also installed Jekyll on the Pi so we can test locally before comitting to production. All I had to do was direct it what to do. It did all the work, with a good attitude.</li>
+  <li>Hardware limitations (Raspberry Pi) were manageable for my simple website build.</li>
+</ul>
+
+<h2 id="next-steps-and-future-exploration">Next Steps and Future Exploration</h2>
+
+<p>I’m considering upgrading from the Raspberry Pi to a Mac Mini and exploring local LLMs to make 24/7 operation cost-effective. I also want to research configured agents in OpenClaw. I am curious to see if that helps with agent memory and maybe with reducing token usage. This is just a hunch at this point.</p>
+
+<p>The current setup has reignited my passion for hands-on technology exploration. This feels like my early software engineering days. The excitement of building something that actually works, combined with endless possibilities for new development. I am excited to see where it goes.</p>
+
+<p><strong>For others considering similar experiments:</strong></p>
+
+<ul>
+  <li><strong>Start small:</strong> Use dedicated hardware you can control</li>
+  <li><strong>Plan for costs:</strong> Model selection significantly impacts usage expenses</li>
+  <li><strong>Expect iteration:</strong> The technology is evolving rapidly—build for flexibility</li>
+</ul>
+
+<h2 id="the-bigger-picture">The Bigger Picture</h2>
+
+<p>OpenClaw represents more than just another AI tool. It’s a glimpse into how we’ll structure work in the near future. As technology leaders, understanding these capabilities now positions us to guide our organizations through the coming transformation.</p>
+
+<p>The agents don’t replace human creativity and strategy, but they can handle execution with unprecedented speed and accuracy. The question isn’t whether AI automation will change how we work, it’s how quickly we can learn to work with it effectively with humans in the lead.</p>]]></content><author><name>Billy J Hart</name></author><category term="Technology" /><category term="AI automation" /><category term="OpenClaw" /><category term="technology leadership" /><category term="artificial intelligence" /><category term="developer tools" /><summary type="html"><![CDATA[A technology architect's honest journey learning OpenClaw AI automation, from initial setup through building functional AI agent teams.]]></summary></entry><entry><title type="html">Getting Started With OpenClaw</title><link href="https://billyjhart.github.io/blog/getting-started-with-openclaw/" rel="alternate" type="text/html" title="Getting Started With OpenClaw" /><published>2026-03-03T13:22:00-05:00</published><updated>2026-03-03T13:22:00-05:00</updated><id>https://billyjhart.github.io/blog/getting-started-with-openclaw</id><content type="html" xml:base="https://billyjhart.github.io/blog/getting-started-with-openclaw/"><![CDATA[<p><em>How a curious tech guy stumbled into OpenClaw and what I’m learning building my first autonomous development team</em></p>
+
+<hr />
+
+<p>On February 9th, 2026, I downloaded OpenClaw and started what has become my most exciting technology exploration in years. Like many discoveries, it began with a podcast.</p>
+
+<p>I was listening to <a href="https://www.theinvestorspodcast.com/infinite-tech/is-agi-here-clawdbot-local-ai-agent-swarms-w-pablo-fernandez-trey-sellers/">The Investor’s Podcast</a> when the hosts interviewed two fascinating guests: one was a tinkerer using OpenClaw as a personal assistant, the other a developer running multiple agents 24/7 that were autonomously building applications. I was immediately hooked and ended up listening to that episode three times.</p>
+
+<p>OpenClaw seemed more than just a shiny new tool. They built working systems solving actual problems. And I wanted in.</p>
+
+<p>In enterprise environments, we’re constantly evaluating new technologies while managing security, policy compliance, and practical constraints. OpenClaw represents something unique: an AI automation platform sophisticated enough for complex tasks. But I need more time to understand if it is controllable enough for professional environments.</p>
+
+<h3 id="hardware-and-isolation-strategy">Hardware and Isolation Strategy</h3>
+
+<p>I had a Raspberry Pi 4 sitting idle after running a Bitcoin node project. I reformatted it and dedicated it to OpenClaw. This isolation decision is crucial to limiting what it has access to.</p>
+
+<p>It seems the consensus is to never run OpenClaw on your primary machine. My employer’s policy prohibits it on corporate laptops, which makes complete sense. I have seen that sometimes OpenClaw doesn’t just respond to questions. It goes ahead and takes action on what it thinks you want done. Limiting access is critical.</p>
+
+<h3 id="the-cost-reality-check">The Cost Reality Check</h3>
+
+<p>Within the first days of experimentation, I learned that <strong>model selection matters a lot.</strong> My LLM usage limits evaporated quickly because I started with Claude Opus 4.6, the most expensive model from Anthropic.</p>
+
+<p>After using a few of the “free” chatbots (ChatGPT, Gemini, and Perplexity) to research how to limit token usage in OpenClaw, I stepped down to Sonnet, and then to Haiku. The performance remained surprisingly good while dramatically reducing costs. However, there’s a security trade-off: newer, more expensive models are better at detecting prompt injection attacks. For isolated local network deployment, this was acceptable risk.</p>
+
+<h2 id="building-an-agentic-development-team">Building an Agentic Development Team</h2>
+
+<h3 id="the-first-experiment">The First Experiment</h3>
+
+<p>My initial request was simple: “Make me a personal website.” Within a few minutes, OpenClaw delivered a well-structured site with decent section recommendations. But the process felt chaotic. I’d ask questions and suddenly find OpenClaw implementing solutions I hadn’t explicitly requested.</p>
+
+<h3 id="applying-human-team-concepts-to-ai-agents">Applying Human Team Concepts to AI Agents</h3>
+
+<p>Drawing on experience with human development teams, I asked the main bot to structure my AI agents similarly. We designed a Product Manager, Project Manager, Designer, and a Developer.</p>
+
+<p>The Product Manager successfully planned a portfolio website with an agent team showcase. The Designer created excellent designs. The Developer built a working implementation matching the design specifications.</p>
+
+<p><strong>But then reality hit:</strong> Between sessions, agents couldn’t remember previous work. I constantly had to re-establish context, which became frustrating quickly.</p>
+
+<h3 id="the-memory-problem-and-solution">The Memory Problem and Solution</h3>
+
+<p>I stepped out of OpenClaw and went to the Claude chat. Working with Claude Opus 4.6 with extended thinking, Claude helped me develop a file-based communication and memory system. Key insights:</p>
+
+<ul>
+  <li><strong>Simplify the hierarchy:</strong> Eliminate Product and Project Managers. The main agent becomes the “Orchestrator.”</li>
+  <li><strong>Create specialized teams:</strong> Start with a Development team (Designer, Developer, Tester).</li>
+  <li><strong>Implement persistent memory:</strong> Each agent gets dedicated SOUL and MEMORY directories.</li>
+</ul>
+
+<h3 id="the-workflow-now-works-like-this">The workflow now works like this:</h3>
+
+<ul>
+  <li>Orchestrator spawns specialized agents as needed</li>
+  <li>Each agent receives task context plus access to their memory files</li>
+  <li>Upon completion, agents provide detailed task reports</li>
+  <li>Orchestrator updates memory and maintains continuity across sessions</li>
+</ul>
+
+<h3 id="ad-hoc-vs-configured-agents">Ad-hoc vs. Configured Agents</h3>
+
+<p>Currently I am using ad-hoc agents (spawned on demand) rather than persistent configured agents. This means context restoration happens every time, but provides flexibility. One of the great things about working with AI agents is they never complain about rewrites or process changes. They’re always eager to tackle the next iteration and they are very patient.</p>
+
+<h2 id="results-and-lessons-learned">Results and Lessons Learned</h2>
+
+<p><strong>What worked:</strong></p>
+<ul>
+  <li>This website was completly built by my agent system in OpenClaw</li>
+  <li>Cost optimization through model selection</li>
+  <li>Security through isolation and local deployment</li>
+</ul>
+
+<p><strong>What surprised me:</strong></p>
+<ul>
+  <li>Agents’ capability exceeded expectations. I started with a simple HTLM site. When I decided to host on Github, my agent recommended we move to a Jekyll based site. The bots handled the full conversion is a short time. They also installed Jekyll on the Pi so we can test locally before comitting to production. All I had to do was direct it what to do. It did all the work, with a good attitude.</li>
+  <li>Hardware limitations (Raspberry Pi) were manageable for my simple website build.</li>
+</ul>
+
+<h2 id="next-steps-and-future-exploration">Next Steps and Future Exploration</h2>
+
+<p>I’m considering upgrading from the Raspberry Pi to a Mac Mini and exploring local LLMs to make 24/7 operation cost-effective. I also want to research configured agents in OpenClaw. I am curious to see if that helps with agent memory and maybe with reducing token usage. This is just a hunch at this point.</p>
+
+<p>The current setup has reignited my passion for hands-on technology exploration. This feels like my early software engineering days. The excitement of building something that actually works, combined with endless possibilities for new development. I am excited to see where it goes.</p>
+
+<p><strong>For others considering similar experiments:</strong></p>
+
+<ul>
+  <li><strong>Start small:</strong> Use dedicated hardware you can control</li>
+  <li><strong>Plan for costs:</strong> Model selection significantly impacts usage expenses</li>
+  <li><strong>Expect iteration:</strong> The technology is evolving rapidly—build for flexibility</li>
+</ul>
+
+<h2 id="the-bigger-picture">The Bigger Picture</h2>
+
+<p>OpenClaw represents more than just another AI tool. It’s a glimpse into how we’ll structure work in the near future. As technology leaders, understanding these capabilities now positions us to guide our organizations through the coming transformation.</p>
+
+<p>The agents don’t replace human creativity and strategy, but they can handle execution with unprecedented speed and accuracy. The question isn’t whether AI automation will change how we work, it’s how quickly we can learn to work with it effectively with humans in the lead.</p>]]></content><author><name>Billy Hart</name></author><category term="deploy" /><category term="deploy-2026-03-03-204357" /><category term="Technology" /><category term="AI automation" /><category term="OpenClaw" /><category term="technology leadership" /><category term="artificial intelligence" /><category term="developer tools" /><summary type="html"><![CDATA[A technology architect's honest journey learning OpenClaw AI automation, from initial setup through building functional AI agent teams.]]></summary></entry></feed>

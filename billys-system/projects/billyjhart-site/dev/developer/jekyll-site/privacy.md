@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
-description: "Privacy policy for Billy Hart's personal website explaining data collection and usage practices."
+description: "Privacy policy for Billy J Hart's personal website explaining data collection and usage practices."
 permalink: /privacy/
 ---
 
@@ -15,7 +15,7 @@ permalink: /privacy/
 <section class="main-content">
     <div class="container">
         <div class="content-wrapper" id="main-content">
-            <p>I'm Billy Hart, and this is my personal website. I thought I should be clear about what I do and don't do with information here.</p>
+            <p>I'm Billy J Hart, and this is my personal website. I thought I should be clear about what I do and don't do with information here.</p>
 
             <h2>What I don't do:</h2>
             <ul>

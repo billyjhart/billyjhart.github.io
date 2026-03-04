@@ -205,6 +205,122 @@
     }
 }
 
+// Teams Section
+.team-section {
+    background: $primary-800;
+    border: 1px solid $primary-700;
+    padding: $spacing-lg;
+    border-radius: 4px;
+    margin-bottom: $spacing-lg;
+    
+    .team-header {
+        text-align: center;
+        margin-bottom: $spacing-lg;
+        padding-bottom: $spacing-md;
+        border-bottom: 1px solid $primary-700;
+        
+        h3 {
+            color: $accent-blue;
+            font-size: $font-size-h3;
+            margin-bottom: $spacing-xs;
+        }
+        
+        .team-description {
+            color: $text-secondary;
+            font-size: $font-size-small;
+        }
+    }
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xl;
+    align-items: start; // Align teams to top instead of stretching
+    
+    @media (max-width: $breakpoint-lg) {
+        grid-template-columns: 1fr;
+        gap: $spacing-lg;
+    }
+}
+
+// Projects Section
+.projects-section {
+    background: $primary-800;
+    border: 1px solid $primary-700;
+    padding: $spacing-lg;
+    border-radius: 4px;
+    margin-bottom: $spacing-lg;
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: $spacing-lg;
+        
+        h3 {
+            color: $accent-blue;
+            margin-bottom: $spacing-xs;
+        }
+        
+        .section-description {
+            color: $text-secondary;
+            font-size: $font-size-small;
+        }
+    }
+}
+
+.project-card {
+    @extend .card;
+    border-left: 4px solid $success-green;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    
+    .project-name {
+        font-size: $font-size-h3;
+        margin-bottom: $spacing-sm;
+    }
+    
+    .project-description {
+        color: $text-secondary;
+        margin-bottom: $spacing-md;
+    }
+    
+    .project-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $text-tertiary;
+        font-size: $font-size-small;
+        
+        @media (max-width: $breakpoint-sm) {
+            flex-direction: column;
+            gap: $spacing-sm;
+        }
+    }
+}
+
+// Visual Connections
+.connection-line {
+    width: 2px;
+    height: 40px;
+    background: $primary-700;
+    margin: 0 auto;
+}
+
+.connection-branches {
+    display: flex;
+    justify-content: center;
+    margin: $spacing-lg 0;
+    
+    &::before {
+        content: '';
+        width: 200px;
+        height: 2px;
+        background: $primary-700;
+    }
+}
+
 // Agent System Cards
 .agent-card {
     @extend .card;
