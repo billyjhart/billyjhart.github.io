@@ -134,7 +134,7 @@ description: "How Billy's AI agents work together to build this site"
             <div class="project-meta">
                 <div class="project-team">📋 Assigned Team: Development Team</div>
                 <div class="project-status">✅ Status: Active Development</div>
-                <div class="project-repo">🔗 Repository: github.com/billyjhart/billyjhart-site</div>
+                <div class="project-repo">🔗 Repository: github.com/billyjhart/billyjhart.github.io</div>
             </div>
         </article>
     </div>
