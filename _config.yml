@@ -62,6 +62,8 @@ navigation:
     url: /
   - name: Agent System
     url: /agents
+  - name: Projects
+    url: /projects
   - name: Blog
     url: /blog
 
