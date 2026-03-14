@@ -12,6 +12,8 @@ seo_description: "A technology architect's honest journey learning OpenClaw AI a
 reading_time: 9
 featured: true
 comments: true
+thumbnail: /assets/images/billy-memoji.jpg
+thumbnail_alt: "Billy J Hart memoji profile image"
 ---
 
 *How a curious tech guy stumbled into OpenClaw and what I'm learning building my first autonomous development team*
