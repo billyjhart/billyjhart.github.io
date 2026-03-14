@@ -12,8 +12,6 @@ seo_description: "A practical lesson from model switching in OpenClaw while vibe
 reading_time: 4
 featured: false
 comments: true
-thumbnail: /assets/images/blog/model-drift-vibe-coding/before.jpeg
-thumbnail_alt: "Before screenshot from the model drift styling issue"
 ---
 
 I was "vibe-coding" with OpenClaw using Codex 5.3 to refine a little web app I’m building as a learning project. I went to bed and OpenClaw reverted to Claude Sonnet overnight. I had Sonnet set as the default to try and save on usage tokens.
