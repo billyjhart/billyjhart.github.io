@@ -568,6 +568,14 @@
     .blog-post-preview {
         padding: $spacing-md;
         margin-bottom: $spacing-lg;
+        border: 1px solid rgba(96, 165, 250, 0.35);
+        border-left: 4px solid $accent-blue;
+        background: rgba(26, 31, 58, 0.95);
+        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.35);
+    }
+
+    .blog-post-preview .post-excerpt {
+        padding: $spacing-sm 0;
     }
 }
 
