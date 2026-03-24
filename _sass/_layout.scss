@@ -585,7 +585,7 @@
     padding: $spacing-xl 0;
 
     @media (max-width: $breakpoint-sm) {
-        padding: $spacing-lg 0;
+        padding: $spacing-lg $spacing-md;
     }
 
     h1 {
